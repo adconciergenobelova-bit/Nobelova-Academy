@@ -5,8 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nobelova Gradani Educational Academy</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #24113f;
+            --deep-purple: #32006b;
+            --purple: #6b2fa0;
+            --lavender: #f6f0ff;
+            --soft-lilac: #ebe0ff;
+            --coral: #ff8b73;
+            --mint: #d7f3e7;
+            --line: #dfd3ee;
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: "Plus Jakarta Sans", system-ui, sans-serif !important;
+            color: var(--ink) !important;
+            background: var(--lavender) !important;
+        }
+        h1, h2, h3, h4 { font-family: Fraunces, Georgia, serif !important; letter-spacing: -0.035em; }
+        header {
+            background: rgba(246, 240, 255, .95) !important;
+            border-bottom: 1px solid var(--line);
+            box-shadow: 0 8px 30px rgba(50, 0, 107, .06) !important;
+            backdrop-filter: blur(14px);
+        }
+        header h1 { color: var(--deep-purple) !important; font-size: 1.8rem; }
+        .nav-link { color: var(--ink) !important; font-size: .82rem; text-transform: uppercase; letter-spacing: .09em; }
+        .nav-link:hover { color: var(--purple) !important; }
+        section { position: relative; }
+        section.bg-gray-50 { background: var(--lavender) !important; }
+        section.bg-white { background: #fff !important; }
+        section.py-20 { padding-top: 7rem; padding-bottom: 7rem; }
+        section > .container { max-width: 1180px; }
+        section h2 { color: var(--deep-purple) !important; font-size: clamp(2.25rem, 4vw, 3.5rem); }
+        section h3 { color: var(--ink) !important; }
+        .text-white h1 { color: #fff !important; }
+        .text-white p { color: #fff !important; }
+        .hero-copy { max-width: 760px; }
+        .course-card {
+            border: 1px solid var(--line);
+            border-radius: 1.25rem !important;
+            box-shadow: 0 16px 36px rgba(50, 0, 107, .08) !important;
+            background: #fff !important;
+        }
+        .course-card:hover { transform: translateY(-6px); transition: transform .25s ease, box-shadow .25s ease; }
+        .course-card > div:first-child { background: var(--soft-lilac) !important; height: 12rem; }
+        .course-card > div:first-child i { color: var(--deep-purple) !important; }
+        .course-card .p-6 { padding: 1.75rem !important; }
+        .course-card span[class*="bg-"] { border-radius: 999px; }
+        .instructor-image { border: 5px solid var(--soft-lilac); object-fit: cover; }
+        .bg-purple-800 { background-color: var(--deep-purple) !important; }
+        .bg-purple-700 { background-color: var(--deep-purple) !important; }
+        .hover\\:bg-purple-800:hover { background-color: var(--purple) !important; }
+        a[class*="rounded-full"] { border-radius: 999px !important; letter-spacing: .02em; }
+        #contact { overflow: hidden; }
+        #contact::before { content: ""; position: absolute; width: 260px; height: 260px; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; top: -110px; right: 8%; }
+        footer { background: var(--ink) !important; }
+        footer a:hover { color: var(--coral) !important; }
+        .booking-panel { color: var(--ink); }
+        .form-field { display: flex; flex-direction: column; gap: .45rem; color: var(--ink); font-size: .8rem; font-weight: 700; letter-spacing: .03em; }
+        .form-field input, .form-field select, .form-field textarea { width: 100%; border: 1px solid var(--line); border-radius: .8rem; padding: .85rem 1rem; background: #fbf9ff; color: var(--ink); font: inherit; font-weight: 500; outline: none; transition: border-color .2s, box-shadow .2s; }
+        .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--purple); box-shadow: 0 0 0 3px rgba(107, 47, 160, .14); }
+        .booking-submit { background: var(--deep-purple) !important; }
+        .booking-submit:hover { background: var(--purple) !important; }
+        @media (max-width: 768px) {
+            section.py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+            header h1 { font-size: 1.55rem; }
+        }
+    </style>
     
 </head>
 <body class="font-sans antialiased text-gray-800">
@@ -286,10 +358,48 @@
 
     <!-- CTA Section -->
     <section class="py-20 bg-purple-800 text-white" id="contact">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-extrabold mb-4">Ready to Transform Your Career?</h2>
-            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto opacity-90">Join Nobelova Gradani Educational Academy today and gain access to world-class courses, expert instructors, and a supportive learning community.</p>
-            <a href="https://wa.link/4gtrls" class="px-10 py-4 bg-white text-purple-800 font-bold rounded-full hover:bg-gray-200 transition duration-300 transform hover:scale-105">Talk to an Advisor</a>
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-extrabold mb-4">Ready to Transform Your Career?</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto opacity-90">Book a training programme with Nobelova Gradani Educational Academy and take the next step with expert guidance.</p>
+            </div>
+            <div class="booking-panel max-w-4xl mx-auto bg-white rounded-2xl p-6 md:p-10 text-left shadow-2xl">
+                <div class="mb-7">
+                    <p class="text-sm uppercase tracking-widest font-bold text-purple-700 mb-2">Training enquiries</p>
+                    <h3 class="text-3xl mb-2">Reserve your place</h3>
+                    <p class="text-gray-600">Share your details and preferred programme. We’ll confirm availability with you on WhatsApp.</p>
+                </div>
+                <form id="training-booking-form" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <label class="form-field">Full name
+                        <input required name="name" type="text" placeholder="Your name" autocomplete="name">
+                    </label>
+                    <label class="form-field">Phone / WhatsApp
+                        <input required name="phone" type="tel" placeholder="0800 000 0000" autocomplete="tel">
+                    </label>
+                    <label class="form-field">Training programme
+                        <select required name="programme">
+                            <option value="" selected disabled>Select a programme</option>
+                            <option>Certificate in Mental Health</option>
+                            <option>Certificate in Developmental Surveillance</option>
+                            <option>Diploma in Early Intervention Services</option>
+                            <option>Diploma in Speech, Language and Communication Disorders</option>
+                            <option>Professional Diploma in Neurodevelopmental Disorder</option>
+                            <option>Diploma in Data Analysis</option>
+                        </select>
+                    </label>
+                    <label class="form-field">Preferred start date
+                        <input required name="date" type="date">
+                    </label>
+                    <label class="form-field md:col-span-2">Additional notes
+                        <textarea name="notes" rows="4" placeholder="Tell us about your goals, organisation, or preferred schedule"></textarea>
+                    </label>
+                    <div class="md:col-span-2 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                        <button type="submit" class="booking-submit px-8 py-3 bg-purple-800 text-white font-bold rounded-full hover:bg-purple-700 transition">Request training booking</button>
+                        <a href="https://wa.link/4gtrls" class="text-purple-800 font-bold hover:text-purple-600">Prefer to chat? WhatsApp us</a>
+                    </div>
+                    <p id="booking-status" class="md:col-span-2 text-sm text-gray-500" aria-live="polite">Your booking request will open WhatsApp with the details pre-filled.</p>
+                </form>
+            </div>
         </div>
     </section>
 
