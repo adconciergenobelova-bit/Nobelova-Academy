@@ -1,0 +1,22 @@
+        /* Custom CSS for elements that need more specific styling */
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: purple;
+            transition: width .3s;
+        }
+        .instructor-image {
+            object-fit: cover;
+            object-position: center;
+            width: 8rem; /* 128px */
+            height: 8rem; /* 128px */
+        }
