@@ -40,6 +40,19 @@
             }
         });
 
+        const FORM_EMAILS = [
+            'ceo@nobelovagradani.org',
+            'abasuperintendent@nobelovagradani.org',
+            'adminsupport@nobelovagradani.org',
+            'contact@nobelovagradani.org',
+            'humanresourcecoord@nobelovagradani.org',
+            'humanresourcecoord2@nobelovagradani.org',
+            'klinicappointment@nobelovagradani.org',
+            'nobelovaklinicadmin@nobelovagradani.org',
+            'nobelovaklinicadmin2@nobelovagradani.org',
+            'nobelovaklinicadmin3@nobelovagradani.org'
+        ];
+
         const bookingForm = document.getElementById('training-booking-form');
         if (bookingForm) {
             bookingForm.addEventListener('submit', function (event) {
@@ -53,6 +66,17 @@
                     `Preferred start date: ${data.get('date')}`,
                     `Notes: ${data.get('notes') || 'None'}`
                 ].join('\n');
-                window.location.href = `https://wa.me/2348081959392?text=${encodeURIComponent(message)}`;
+                const subject = `Website training booking request from ${data.get('name')}`;
+                const emailBody = [
+                    'New Nobelova Gradani website training request',
+                    `Name: ${data.get('name')}`,
+                    `Phone / WhatsApp: ${data.get('phone')}`,
+                    `Programme: ${data.get('programme')}`,
+                    `Preferred start date: ${data.get('date')}`,
+                    `Notes: ${data.get('notes') || 'None'}`
+                ].join('\\n');
+                const status = document.getElementById('booking-status');
+                if (status) status.textContent = 'Your email draft is ready. Please review it and press Send.';
+                window.location.href = `mailto:${FORM_EMAILS.join(',')}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
             });
         }

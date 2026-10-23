@@ -1,15 +1,18 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nobelova Gradani Educational Academy</title>
+    <title>Nobelova Gradani | Child Development, PABA, School Health Screening & Training</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --ink: #24113f;
@@ -22,139 +25,378 @@
             --line: #dfd3ee;
         }
 
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: "Plus Jakarta Sans", system-ui, sans-serif !important;
             color: var(--ink) !important;
             background: var(--lavender) !important;
         }
-        h1, h2, h3, h4 { font-family: Fraunces, Georgia, serif !important; letter-spacing: -0.035em; }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: Fraunces, Georgia, serif !important;
+            letter-spacing: -0.035em;
+        }
+
         header {
             background: rgba(246, 240, 255, .95) !important;
             border-bottom: 1px solid var(--line);
             box-shadow: 0 8px 30px rgba(50, 0, 107, .06) !important;
             backdrop-filter: blur(14px);
         }
-        header h1 { color: var(--deep-purple) !important; font-size: 1.8rem; }
-        .nav-link { color: var(--ink) !important; font-size: .82rem; text-transform: uppercase; letter-spacing: .09em; }
-        .nav-link:hover { color: var(--purple) !important; }
-        section { position: relative; }
-        section.bg-gray-50 { background: var(--lavender) !important; }
-        section.bg-white { background: #fff !important; }
-        section.py-20 { padding-top: 7rem; padding-bottom: 7rem; }
-        section > .container { max-width: 1180px; }
-        section h2 { color: var(--deep-purple) !important; font-size: clamp(2.25rem, 4vw, 3.5rem); }
-        section h3 { color: var(--ink) !important; }
-        .text-white h1 { color: #fff !important; }
-        .text-white p { color: #fff !important; }
-        .hero-copy { max-width: 760px; }
+
+        header h1 {
+            color: var(--deep-purple) !important;
+            font-size: 1.8rem;
+        }
+
+        .nav-link {
+            color: var(--ink) !important;
+            font-size: .82rem;
+            text-transform: uppercase;
+            letter-spacing: .09em;
+        }
+
+        .nav-link:hover {
+            color: var(--purple) !important;
+        }
+
+        section {
+            position: relative;
+        }
+
+        section.bg-gray-50 {
+            background: var(--lavender) !important;
+        }
+
+        section.bg-white {
+            background: #fff !important;
+        }
+
+        section.py-20 {
+            padding-top: 7rem;
+            padding-bottom: 7rem;
+        }
+
+        section>.container {
+            max-width: 1180px;
+        }
+
+        section h2 {
+            color: var(--deep-purple) !important;
+            font-size: clamp(2.25rem, 4vw, 3.5rem);
+        }
+
+        section h3 {
+            color: var(--ink) !important;
+        }
+
+        .text-white h1 {
+            color: #fff !important;
+        }
+
+        .text-white p {
+            color: #fff !important;
+        }
+
+        .hero-section {
+            min-height: 82vh;
+            display: grid;
+            place-items: center;
+            text-align: center;
+        }
+
+        .hero-section>.container {
+            width: 100%;
+        }
+
+        .hero-section h1 {
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-section p {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    .cta-eyebrow {
+        font-family: 'Fraunces', Georgia, serif;
+        font-weight: 700;
+    }
+
+        .hero-copy {
+            max-width: 760px;
+        }
+
         .course-card {
             border: 1px solid var(--line);
             border-radius: 1.25rem !important;
             box-shadow: 0 16px 36px rgba(50, 0, 107, .08) !important;
             background: #fff !important;
         }
-        .course-card:hover { transform: translateY(-6px); transition: transform .25s ease, box-shadow .25s ease; }
-        .course-card > div:first-child { background: var(--soft-lilac) !important; height: 12rem; }
-        .course-card > div:first-child i { color: var(--deep-purple) !important; }
-        .course-card .p-6 { padding: 1.75rem !important; }
-        .course-card span[class*="bg-"] { border-radius: 999px; }
-        .instructor-image { border: 5px solid var(--soft-lilac); object-fit: cover; }
-        .bg-purple-800 { background-color: var(--deep-purple) !important; }
-        .bg-purple-700 { background-color: var(--deep-purple) !important; }
-        .hover\\:bg-purple-800:hover { background-color: var(--purple) !important; }
-        a[class*="rounded-full"] { border-radius: 999px !important; letter-spacing: .02em; }
-        #contact { overflow: hidden; }
-        #contact::before { content: ""; position: absolute; width: 260px; height: 260px; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; top: -110px; right: 8%; }
-        footer { background: var(--ink) !important; }
-        footer a:hover { color: var(--coral) !important; }
-        .booking-panel { color: var(--ink); }
-        .form-field { display: flex; flex-direction: column; gap: .45rem; color: var(--ink); font-size: .8rem; font-weight: 700; letter-spacing: .03em; }
-        .form-field input, .form-field select, .form-field textarea { width: 100%; border: 1px solid var(--line); border-radius: .8rem; padding: .85rem 1rem; background: #fbf9ff; color: var(--ink); font: inherit; font-weight: 500; outline: none; transition: border-color .2s, box-shadow .2s; }
-        .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--purple); box-shadow: 0 0 0 3px rgba(107, 47, 160, .14); }
-        .booking-submit { background: var(--deep-purple) !important; }
-        .booking-submit:hover { background: var(--purple) !important; }
+
+        .course-card:hover {
+            transform: translateY(-6px);
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .course-card>div:first-child {
+            background: var(--soft-lilac) !important;
+            height: 12rem;
+        }
+
+        .course-card>div:first-child i {
+            color: var(--deep-purple) !important;
+        }
+
+        .course-card .p-6 {
+            padding: 1.75rem !important;
+        }
+
+        .course-card span[class*="bg-"] {
+            border-radius: 999px;
+        }
+
+        .instructor-image {
+            border: 5px solid var(--soft-lilac);
+            object-fit: cover;
+            object-position: 50% 27% !important;
+        }
+
+        .bg-purple-800 {
+            background-color: var(--deep-purple) !important;
+        }
+
+        .bg-purple-700 {
+            background-color: var(--deep-purple) !important;
+        }
+
+        .hover\\:bg-purple-800:hover {
+            background-color: var(--purple) !important;
+        }
+
+        a[class*="rounded-full"] {
+            border-radius: 999px !important;
+            letter-spacing: .02em;
+        }
+
+        #contact {
+            overflow: hidden;
+        }
+
+        #contact::before {
+            content: "";
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            border: 1px solid rgba(255, 255, 255, .25);
+            border-radius: 50%;
+            top: -110px;
+            right: 8%;
+        }
+
+        footer {
+            background: var(--ink) !important;
+        }
+
+        footer a:hover {
+            color: var(--coral) !important;
+        }
+
+        .booking-panel {
+            color: var(--ink);
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: .45rem;
+            color: var(--ink);
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .03em;
+        }
+
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            width: 100%;
+            border: 1px solid var(--line);
+            border-radius: .8rem;
+            padding: .85rem 1rem;
+            background: #fbf9ff;
+            color: var(--ink);
+            font: inherit;
+            font-weight: 500;
+            outline: none;
+            transition: border-color .2s, box-shadow .2s;
+        }
+
+        .form-field input:focus,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            border-color: var(--purple);
+            box-shadow: 0 0 0 3px rgba(107, 47, 160, .14);
+        }
+
+        .booking-submit {
+            background: var(--deep-purple) !important;
+        }
+
+        .booking-submit:hover {
+            background: var(--purple) !important;
+        }
+
         @media (max-width: 768px) {
-            section.py-20 { padding-top: 5rem; padding-bottom: 5rem; }
-            header h1 { font-size: 1.55rem; }
+            section.py-20 {
+                padding-top: 5rem;
+                padding-bottom: 5rem;
+            }
+
+            header h1 {
+                font-size: 1.55rem;
+            }
         }
     </style>
-    
+
 </head>
+
 <body class="font-sans antialiased text-gray-800">
     <!-- Header/Navigation -->
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center">
-                <img src="https://ik.imagekit.io/oy1ippox9/nobelova_gradani_psychoeducation.jpg?updatedAt=1750936281053" alt="NGEA Logo" class="h-10 w-10 rounded-full mr-3">
-                <h1 class="text-2xl font-bold text-purple-800">NGEA</h1>
+                <img src="https://www.nobelovagradani.org/img/logo.webp"
+                    alt="Nobelova Gradani" class="h-12 w-auto max-w-[170px] object-contain mr-3">
             </div>
-            
+
             <nav class="hidden md:flex items-center space-x-8">
-                <a href="#" class="nav-link text-gray-700 hover:text-purple-800 font-semibold tracking-wide">Home</a>
-                <a href="#courses" class="nav-link text-gray-700 hover:text-purple-800 font-semibold tracking-wide">Courses</a>
-                <a href="#about" class="nav-link text-gray-700 hover:text-purple-800 font-semibold tracking-wide">About</a>
-                <a href="#contact" class="nav-link text-gray-700 hover:text-purple-800 font-semibold tracking-wide">Contact</a>
+                <a href="#services" class="nav-link text-gray-700 hover:text-purple-800 font-semibold tracking-wide">Services</a>
+                <a href="#about-us"
+                    class="nav-link text-gray-700 hover:text-purple-800 font-semibold tracking-wide">About</a>
+                <a href="#courses"
+                    class="nav-link text-gray-700 hover:text-purple-800 font-semibold tracking-wide">Training</a>
+                <a href="#team" class="nav-link text-gray-700 hover:text-purple-800 font-semibold tracking-wide">Meet
+                    the Team</a>
+                <a href="#testimonials"
+                    class="nav-link text-gray-700 hover:text-purple-800 font-semibold tracking-wide">Testimonials</a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-purple-800 font-semibold tracking-wide">Book
+                    a free consultation</a>
             </nav>
-            
+
             <button id="mobile-menu-button" class="md:hidden text-gray-800 hover:text-purple-800 focus:outline-none">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
-        
+
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
             <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
-                <a href="#" class="py-2 text-gray-700 hover:text-purple-800 font-semibold border-b border-gray-200">Home</a>
-                <a href="#courses" class="py-2 text-gray-700 hover:text-purple-800 font-semibold border-b border-gray-200">Courses</a>
-                <a href="#about" class="py-2 text-gray-700 hover:text-purple-800 font-semibold border-b border-gray-200">About</a>
-                <a href="#contact" class="py-2 text-gray-700 hover:text-purple-800 font-semibold">Contact</a>
+                <a href="#services"
+                    class="py-2 text-gray-700 hover:text-purple-800 font-semibold border-b border-gray-200">Services</a>
+                <a href="#about-us"
+                    class="py-2 text-gray-700 hover:text-purple-800 font-semibold border-b border-gray-200">About</a>
+                <a href="#courses"
+                    class="py-2 text-gray-700 hover:text-purple-800 font-semibold border-b border-gray-200">Training</a>
+                <a href="#team"
+                    class="py-2 text-gray-700 hover:text-purple-800 font-semibold border-b border-gray-200">Meet the
+                    Team</a>
+                <a href="#testimonials"
+                    class="py-2 text-gray-700 hover:text-purple-800 font-semibold border-b border-gray-200">Testimonials</a>
+                <a href="#contact" class="py-2 text-gray-700 hover:text-purple-800 font-semibold">Book a free
+                    consultation</a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="text-white relative" style="background-image: url('https://ik.imagekit.io/oy1ippox9/WhatsApp%20Image%202025-06-26%20at%2016.06.46_e5c6e650.jpg?updatedAt=1750951739309'); background-size: cover; background-position: center; min-height: 80vh;">
+    <section class="hero-section text-white relative"
+        style="background-image: url('https://ik.imagekit.io/oy1ippox9/WhatsApp%20Image%202025-06-26%20at%2016.06.46_e5c6e650.jpg?updatedAt=1750951739309'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="container mx-auto px-6 py-24 md:py-40 flex flex-col justify-center items-center text-center relative z-10">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Unlock Your Potential with Nobelova Gradani</h1>
-            <p class="text-lg md:text-xl mb-8 max-w-3xl opacity-90">Join thousands of students learning cutting-edge skills from industry experts.</p>
-            <a href="#courses" class="px-10 py-4 bg-purple-700 text-white font-bold rounded-full hover:bg-purple-800 transition duration-300 transform hover:scale-105">Explore Courses</a>
+        <div
+            class="container mx-auto px-6 py-24 md:py-40 flex flex-col justify-center items-center text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Developmental Surveillance & PABA Training</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl opacity-90">Since 2012, Nobelova Gradani has partnered with
+                families, schools and organisations across Nigeria to support child development, education, workforce
+                development and professional capacity building.</p>
+            <a href="#courses"
+                class="px-10 py-4 bg-purple-700 text-white font-bold rounded-full hover:bg-purple-800 transition duration-300 transform hover:scale-105">Explore
+                our training</a>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-20 bg-gray-50" id="about">
+    <section class="py-20 bg-gray-50" id="services">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Why Choose Nobelova?</h2>
-                <p class="max-w-2xl mx-auto text-gray-600 text-lg">Our unique approach to online learning makes education accessible, engaging, and effective.</p>
+                <h2 class="text-4xl font-bold mb-4">Our services</h2>
+                <p class="max-w-2xl mx-auto text-gray-600 text-lg">Our connected services help identify children’s needs
+                    early, build positive behaviour supports, and equip staff to respond with confidence.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div class="text-center">
                     <div class="w-20 h-20 bg-purple-200 rounded-full flex items-center justify-center mb-6 mx-auto">
                         <i class="fas fa-chalkboard-teacher text-purple-800 text-3xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3">Expert Instructors</h3>
-                    <p class="text-gray-600">Learn from industry professionals with years of practical experience in their fields.</p>
+                    <h3 class="text-2xl font-bold mb-3">Child development</h3>
+                    <p class="text-gray-600">Play-based screening, psychoeducation and practical early-support plans for
+                        children and families.</p>
                 </div>
-                
+
                 <div class="text-center">
                     <div class="w-20 h-20 bg-purple-200 rounded-full flex items-center justify-center mb-6 mx-auto">
                         <i class="fas fa-laptop-code text-purple-800 text-3xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3">Hands-on Projects</h3>
-                    <p class="text-gray-600">Apply what you learn through real-world projects that build your portfolio.</p>
+                    <h3 class="text-2xl font-bold mb-3">Pediatric ABA services</h3>
+                    <p class="text-gray-600">Data-driven behaviour support for schools and clinics, with positive plans
+                        and coached implementation.</p>
                 </div>
-                
+
                 <div class="text-center">
                     <div class="w-20 h-20 bg-purple-200 rounded-full flex items-center justify-center mb-6 mx-auto">
                         <i class="fas fa-users text-purple-800 text-3xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3">Community Support</h3>
-                    <p class="text-gray-600">Join a vibrant community of learners and get support when you need it.</p>
+                    <h3 class="text-2xl font-bold mb-3">School health & training</h3>
+                    <p class="text-gray-600">School health screening, parent training, professional development and
+                        internationally aligned credentialing.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Nobelova Gradani -->
+    <section class="py-20 bg-white" id="about-us">
+        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <p class="text-sm uppercase tracking-widest font-bold text-purple-700 mb-3">About Nobelova Gradani</p>
+                <h2 class="text-4xl font-bold mb-5">Creating opportunities to learn, develop and thrive.</h2>
+                <p class="text-gray-600 text-lg mb-4">We work with families, schools, educators, practitioners and
+                    organisations to promote meaningful developmental and educational outcomes.</p>
+                <p class="text-gray-600">Our programmes are guided by evidence-based practices and professional
+                    standards. Training and credentialing pathways are aligned with recognised international frameworks,
+                    including QABA and IBAO.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="p-6 rounded-2xl bg-purple-100"><strong
+                        class="block text-4xl text-purple-900">64+</strong><span class="text-gray-700">Partner
+                        schools</span></div>
+                <div class="p-6 rounded-2xl bg-green-100"><strong
+                        class="block text-4xl text-purple-900">8k+</strong><span class="text-gray-700">Children
+                        supported</span></div>
+                <div class="p-6 rounded-2xl bg-orange-100"><strong
+                        class="block text-4xl text-purple-900">97</strong><span class="text-gray-700">Staff
+                        members</span></div>
+                <div class="p-6 rounded-2xl bg-blue-100"><strong
+                        class="block text-4xl text-purple-900">2012</strong><span class="text-gray-700">Serving
+                        since</span></div>
             </div>
         </div>
     </section>
@@ -163,90 +405,104 @@
     <section class="py-20" id="courses">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Our Courses</h2>
-                <p class="max-w-2xl mx-auto text-gray-600 text-lg">Browse our courses and start learning today.</p>
+                <h2 class="text-4xl font-bold mb-4">Training & certification</h2>
+                <p class="max-w-2xl mx-auto text-gray-600 text-lg">Build practical expertise through professional
+                    programmes aligned with recognised international frameworks, including QABA and IBAO.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
+
                 <!-- Course 1 -->
-                <div class="course-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div
+                    class="course-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                     <div class="h-56 bg-purple-300 flex items-center justify-center">
                         <i class="fas fa-brain text-6xl text-purple-800"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Certificate in Mental Health</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Gain essential knowledge about mental health conditions, assessment techniques, and intervention strategies.</p>
+                        <p class="text-gray-600 mb-4 text-sm">Gain essential knowledge about mental health conditions,
+                            assessment techniques, and intervention strategies.</p>
                         <div class="flex justify-between items-center">
                             <div class="flex items-center">
                                 <i class="fas fa-star text-yellow-500 mr-1"></i>
                                 <span class="font-bold text-gray-800">4.9</span>
                             </div>
-                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Bestseller</span>
+                            <span
+                                class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Bestseller</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Course 2 -->
-                <div class="course-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div
+                    class="course-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                     <div class="h-56 bg-purple-300 flex items-center justify-center">
                         <i class="fa-solid fa-child text-6xl text-purple-800"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Certificate in Developmental Surveillance</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Learn to monitor and assess child development milestones and identify potential delays.</p>
+                        <p class="text-gray-600 mb-4 text-sm">Learn to monitor and assess child development milestones
+                            and identify potential delays.</p>
                         <div class="flex justify-between items-center">
                             <div class="flex items-center">
                                 <i class="fas fa-star text-yellow-500 mr-1"></i>
                                 <span class="font-bold text-gray-800">4.8</span>
                             </div>
-                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">New</span>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">New</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Course 3 -->
-                <div class="course-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div
+                    class="course-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                     <div class="h-56 bg-purple-300 flex items-center justify-center">
                         <i class="fas fa-brain text-6xl text-purple-800"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Diploma in Early Intervention Services</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Comprehensive training in providing early intervention services to children and their families.</p>
+                        <p class="text-gray-600 mb-4 text-sm">Comprehensive training in providing early intervention
+                            services to children and their families.</p>
                         <div class="flex justify-between items-center">
                             <div class="flex items-center">
                                 <i class="fas fa-star text-yellow-500 mr-1"></i>
                                 <span class="font-bold text-gray-800">4.7</span>
                             </div>
-                             <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Popular</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Popular</span>
                         </div>
                     </div>
                 </div>
-              
-              <div class="course-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+
+                <div
+                    class="course-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                     <div class="h-56 bg-purple-300 flex items-center justify-center">
                         <i class="fa-solid fa-language text-6xl text-purple-800"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Diploma in Speech, Language and Communication Disorders</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Specialized training in assessing and managing speech, language, and communication disorders.</p>
+                        <p class="text-gray-600 mb-4 text-sm">Specialized training in assessing and managing speech,
+                            language, and communication disorders.</p>
                         <div class="flex justify-between items-center">
                             <div class="flex items-center">
                                 <i class="fas fa-star text-yellow-500 mr-1"></i>
                                 <span class="font-bold text-gray-800">4.9</span>
                             </div>
-                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Bestseller</span>
+                            <span
+                                class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Bestseller</span>
                         </div>
                     </div>
                 </div>
-              
-              <div class="course-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+
+                <div
+                    class="course-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                     <div class="h-56 bg-purple-300 flex items-center justify-center">
                         <i class="fas fa-brain text-6xl text-purple-800"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Professional Diploma in Neurodevelopmental Disorder</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Advanced program covering assessment, diagnosis, and intervention strategies for various neurodevelopmental disorders.</p>
+                        <p class="text-gray-600 mb-4 text-sm">Advanced program covering assessment, diagnosis, and
+                            intervention strategies for various neurodevelopmental disorders.</p>
                         <div class="flex justify-between items-center">
                             <div class="flex items-center">
                                 <i class="fas fa-star text-yellow-500 mr-1"></i>
@@ -256,99 +512,113 @@
                         </div>
                     </div>
                 </div>
-              
-              <div class="course-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+
+                <div
+                    class="course-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                     <div class="h-56 bg-purple-300 flex items-center justify-center">
                         <i class="fa-solid fa-chart-column text-6xl text-purple-800"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Diploma in Data Analysis</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Develop essential data analysis skills applicable to healthcare, education, and research settings.</p>
+                        <p class="text-gray-600 mb-4 text-sm">Develop essential data analysis skills applicable to
+                            healthcare, education, and research settings.</p>
                         <div class="flex justify-between items-center">
                             <div class="flex items-center">
                                 <i class="fas fa-star text-yellow-500 mr-1"></i>
                                 <span class="font-bold text-gray-800">4.9</span>
                             </div>
-                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">New</span>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">New</span>
                         </div>
                     </div>
                 </div>
-              
+
             </div>
         </div>
     </section>
 
     <!-- Meet the Team -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white" id="team">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Meet Our Instructors</h2>
-                <p class="max-w-2xl mx-auto text-gray-600 text-lg">Our instructors are industry leaders and passionate educators dedicated to your success.</p>
+                <h2 class="text-4xl font-bold mb-4">Meet the team</h2>
+                <p class="max-w-2xl mx-auto text-gray-600 text-lg">Our educators, clinicians and professional trainers
+                    bring practical experience and compassionate support to every programme.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                 <div class="text-center">
-                    <img src="download.jpg" alt="Instructor 1" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg instructor-image">
-                    <h3 class="text-2xl font-bold mb-1">Mrs. Helen Oshikoya</h3>
-                    <p class="text-gray-500 mb-2">Lead Instructor, Mental Health</p>
-                    <p class="text-gray-600">Mrs. Oshikoya has over 15 years of experience in clinical psychology and has published numerous papers on child development.</p>
+                    <img src="download.jpg" alt="Instructor 1"
+                        class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg instructor-image">
+                    <h3 class="text-2xl font-bold mb-1">Helen Oshikoya</h3>
+                    <p class="text-gray-500 mb-2">Founder & professional lead</p>
+                    <p class="text-gray-600">Coordinates Nobelova Gradani’s child development, school support and
+                        professional capacity-building programmes.</p>
                 </div>
 
                 <div class="text-center">
-                    <img src="jeremiah1.jpg" alt="Instructor 2" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg instructor-image">
-                    <h3 class="text-2xl font-bold mb-1">Mr. Jeremiah Ikhide</h3>
-                    <p class="text-gray-500 mb-2">Lead Instructor, Language Disorder</p>
-                    <p class="text-gray-600">Mr. Ikhide is a certified speech-language pathologist with extensive experience in both clinical and research settings.</p>
+                    <img src="jeremiah1.jpg" alt="Instructor 2"
+                        class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg instructor-image">
+                    <h3 class="text-2xl font-bold mb-1">Charles Iloabueke</h3>
+                    <p class="text-gray-500 mb-2">School Health Manager</p>
+                    <p class="text-gray-600">Supports school health screening programmes and helps schools turn findings
+                        into practical wellbeing actions.</p>
                 </div>
 
                 <div class="text-center">
-                    <img src="jeremiah2.jpg" alt="Instructor 3" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg instructor-image">
-                    <h3 class="text-2xl font-bold mb-1">Mr. Jeremiah Olalekan</h3>
-                    <p class="text-gray-500 mb-2">Lead Instructor, Data Analysis</p>
-                    <p class="text-gray-600">Mr. Olalekan is a data scientist with a passion for making data accessible. He has worked with several Fortune 500 companies.</p>
+                    <img src="jeremiah2.jpg" alt="Instructor 3"
+                        class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg instructor-image">
+                    <h3 class="text-2xl font-bold mb-1">Elisha Iliya</h3>
+                    <p class="text-gray-500 mb-2">HR / Client Relations Superintendent</p>
+                    <p class="text-gray-600">Helps organisations, families and practitioners connect with the right
+                        service and support pathway.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 bg-gray-50" id="testimonials">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">What Our Students Say</h2>
-                <p class="max-w-2xl mx-auto text-gray-600 text-lg">Don't just take our word for it - hear from our students.</p>
+                <h2 class="text-4xl font-bold mb-4">Testimonials</h2>
+                <p class="max-w-2xl mx-auto text-gray-600 text-lg">Hear from professionals and families who have
+                    experienced Nobelova Gradani’s support and training.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <p class="text-gray-600 mb-6">"The Diploma in Early Intervention Services transformed my approach to working with children with special needs. The practical training was exceptional."</p>
+                    <p class="text-gray-600 mb-6">"The practical guidance helped our team understand developmental needs
+                        earlier and respond with more confidence in the classroom."</p>
                     <div class="flex items-center">
                         <img src="https://via.placeholder.com/150" alt="Student 1" class="w-12 h-12 rounded-full mr-4">
                         <div>
-                            <h4 class="font-bold">Sarah Johnson</h4>
-                            <p class="text-gray-500 text-sm">Special Education Teacher</p>
+                            <h4 class="font-bold">School partner</h4>
+                            <p class="text-gray-500 text-sm">Lagos school community</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <p class="text-gray-600 mb-6">"As a pediatric nurse, the Professional Diploma in Neurodevelopmental Disorders gave me the specialized knowledge I needed to better support my patients."</p>
+                    <p class="text-gray-600 mb-6">"The training connected evidence-based practice to the real situations
+                        families and children face every day."</p>
                     <div class="flex items-center">
                         <img src="https://via.placeholder.com/150" alt="Student 2" class="w-12 h-12 rounded-full mr-4">
                         <div>
-                            <h4 class="font-bold">Tunde Hassan</h4>
-                            <p class="text-gray-500 text-sm">Pediatric Nurse</p>
+                            <h4 class="font-bold">Training participant</h4>
+                            <p class="text-gray-500 text-sm">Education professional</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <p class="text-gray-600 mb-6">"The Data Analysis diploma provided practical skills I could immediately apply to my healthcare research. The instructors were knowledgeable and supportive."</p>
+                    <p class="text-gray-600 mb-6">"Nobelova Gradani creates a clear partnership between families,
+                        educators and practitioners. The support continues beyond one session."</p>
                     <div class="flex items-center">
                         <img src="https://via.placeholder.com/150" alt="Student 3" class="w-12 h-12 rounded-full mr-4">
                         <div>
-                            <h4 class="font-bold">Aisha Williams</h4>
-                            <p class="text-gray-500 text-sm">Healthcare Researcher</p>
+                            <h4 class="font-bold">Family partner</h4>
+                            <p class="text-gray-500 text-sm">Parent and caregiver</p>
                         </div>
                     </div>
                 </div>
@@ -357,17 +627,20 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-purple-800 text-white" id="contact">
+    <section class="py-20 bg-purple-800 text-white" id="contact" aria-labelledby="cta-heading">
         <div class="container mx-auto px-6">
             <div class="text-center mb-10">
-                <h2 class="text-4xl font-extrabold mb-4">Ready to Transform Your Career?</h2>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto opacity-90">Book a training programme with Nobelova Gradani Educational Academy and take the next step with expert guidance.</p>
+        <p class="cta-eyebrow text-4xl font-bold text-purple-200 mb-4">Start your journey</p>
+                <h2 id="cta-heading" class="text-4xl font-bold mb-4">Book a free consultation</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto opacity-90">Tell us who you are and what you need. We
+                    confirm every booking by phone or WhatsApp within one business day — no obligation.</p>
             </div>
             <div class="booking-panel max-w-4xl mx-auto bg-white rounded-2xl p-6 md:p-10 text-left shadow-2xl">
                 <div class="mb-7">
                     <p class="text-sm uppercase tracking-widest font-bold text-purple-700 mb-2">Training enquiries</p>
-                    <h3 class="text-3xl mb-2">Reserve your place</h3>
-                    <p class="text-gray-600">Share your details and preferred programme. We’ll confirm availability with you on WhatsApp.</p>
+                    <h3 class="text-3xl mb-2">Training booking form</h3>
+                    <p class="text-gray-600">Share your details and preferred programme. We’ll confirm availability with
+                        you on WhatsApp.</p>
                 </div>
                 <form id="training-booking-form" class="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <label class="form-field">Full name
@@ -391,13 +664,18 @@
                         <input required name="date" type="date">
                     </label>
                     <label class="form-field md:col-span-2">Additional notes
-                        <textarea name="notes" rows="4" placeholder="Tell us about your goals, organisation, or preferred schedule"></textarea>
+                        <textarea name="notes" rows="4"
+                            placeholder="Tell us about your goals, organisation, or preferred schedule"></textarea>
                     </label>
                     <div class="md:col-span-2 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                        <button type="submit" class="booking-submit px-8 py-3 bg-purple-800 text-white font-bold rounded-full hover:bg-purple-700 transition">Request training booking</button>
-                        <a href="https://wa.link/4gtrls" class="text-purple-800 font-bold hover:text-purple-600">Prefer to chat? WhatsApp us</a>
+                        <button type="submit"
+                            class="booking-submit px-8 py-3 bg-purple-800 text-white font-bold rounded-full hover:bg-purple-700 transition">Request
+                            training booking</button>
+                        <a href="https://wa.link/4gtrls" class="text-purple-800 font-bold hover:text-purple-600">Prefer
+                            to chat? WhatsApp us</a>
                     </div>
-                    <p id="booking-status" class="md:col-span-2 text-sm text-gray-500" aria-live="polite">Your booking request will open WhatsApp with the details pre-filled.</p>
+                    <p id="booking-status" class="md:col-span-2 text-sm text-gray-500" aria-live="polite">Your booking
+                        request will open an email draft addressed to the Nobelova Gradani team.</p>
                 </form>
             </div>
         </div>
@@ -408,36 +686,52 @@
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
-                    <h3 class="text-lg font-bold mb-4">About NGEA</h3>
-                    <p class="text-gray-400 mb-4">Providing accredited professional education for teachers, medical professionals, and healthcare workers.</p>
+                    <h3 class="text-lg font-bold mb-4">About Nobelova Gradani</h3>
+                    <p class="text-gray-400 mb-4">Child development, pediatric applied behavior analysis services
+                        (PABA), school health screening, professional training and QABA/IBAO-aligned credentialing in
+                        Lagos.</p>
                     <div class="flex space-x-4">
-                        <a href="https://x.com/nobelovagradani" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter fa-lg"></i></a>
-                        <a href="https://www.facebook.com/NobelovaGradani?_rdc=1&_rdr#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook fa-lg"></i></a>
-                        <a href="https://www.instagram.com/nobelova_loves_me/" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a href="https://ng.linkedin.com/company/nobelova-gradani-psychoeducational-services" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="https://x.com/nobelovagradani"
+                            class="text-gray-400 hover:text-white transition-colors"><i
+                                class="fab fa-twitter fa-lg"></i></a>
+                        <a href="https://www.facebook.com/NobelovaGradani?_rdc=1&_rdr#"
+                            class="text-gray-400 hover:text-white transition-colors"><i
+                                class="fab fa-facebook fa-lg"></i></a>
+                        <a href="https://www.instagram.com/nobelova_loves_me/"
+                            class="text-gray-400 hover:text-white transition-colors"><i
+                                class="fab fa-instagram fa-lg"></i></a>
+                        <a href="https://ng.linkedin.com/company/nobelova-gradani-psychoeducational-services"
+                            class="text-gray-400 hover:text-white transition-colors"><i
+                                class="fab fa-linkedin fa-lg"></i></a>
                     </div>
                 </div>
-                
+
                 <div>
                     <h3 class="text-lg font-bold mb-4">Courses</h3>
                     <ul class="space-y-2">
-                        <li><a href="#courses" class="text-gray-400 hover:text-white transition-colors">Mental Health</a></li>
-                        <li><a href="#courses" class="text-gray-400 hover:text-white transition-colors">Developmental Surveillance</a></li>
-                        <li><a href="#courses" class="text-gray-400 hover:text-white transition-colors">Early Intervention</a></li>
-                        <li><a href="#courses" class="text-gray-400 hover:text-white transition-colors">Speech & Language</a></li>
-                        <li><a href="#courses" class="text-gray-400 hover:text-white transition-colors">Neurodevelopmental Disorder</a></li>
-                        <li><a href="#courses" class="text-gray-400 hover:text-white transition-colors">Data Analysis</a></li>
+                        <li><a href="#courses" class="text-gray-400 hover:text-white transition-colors">Child
+                                Development</a></li>
+                        <li><a href="#courses" class="text-gray-400 hover:text-white transition-colors">Pediatric ABA
+                                Services</a></li>
+                        <li><a href="#courses" class="text-gray-400 hover:text-white transition-colors">School Health
+                                Screening</a></li>
+                        <li><a href="#courses" class="text-gray-400 hover:text-white transition-colors">Training &
+                                Certification</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-white transition-colors">Meet the Team</a>
+                        </li>
+                        <li><a href="#testimonials"
+                                class="text-gray-400 hover:text-white transition-colors">Testimonials</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="text-lg font-bold mb-4">Company</h3>
                     <ul class="space-y-2">
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Press</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Partners</a></li>
+                        <li><a href="#about-us" class="text-gray-400 hover:text-white transition-colors">About Us</a>
+                        </li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Book a
+                                consultation</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
 
@@ -446,33 +740,24 @@
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-center">
                             <i class="fas fa-map-marker-alt w-6 mr-2"></i>
-                            <span>123 Education Lane, Knowledge City, NG</span>
+                            <span>11 Buraimoh St, Obanikoro, Lagos 102216, Nigeria</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-phone w-6 mr-2"></i>
-                            <span>+234 123 456 7890</span>
+                            <span>0808 195 9392</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope w-6 mr-2"></i>
-                            <span>hello@ngea.com</span>
+                            <span>nobelovagradani@gmail.com</span>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
-                <p>&copy; 2025 Nobelova Academy. All rights reserved.</p>
+                <p>&copy; 2026 Nobelova Gradani. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    <!-- ...existing code... -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const menuBtn = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', function() {
-        mobileMenu.classList.toggle('hidden');
-    });
-});
-</script>
 </body>
+
 </html>
