@@ -254,7 +254,11 @@
             background: var(--purple) !important;
         }
 
-        @media (max-width: 768px) {
+ .section-image { width: 100%; height: 260px; object-fit: cover; border-radius: 1.5rem; box-shadow: 0 16px 36px rgba(50, 0, 107, .12); }
+ .section-image-tall { height: 360px; }
+ .course-card>div:first-child img { width: 100%; height: 100%; object-fit: cover; }
+ .image-caption { color: var(--purple); font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+ @media (max-width: 768px) {
             section.py-20 {
                 padding-top: 5rem;
                 padding-bottom: 5rem;
@@ -384,6 +388,10 @@
                     standards. Training and credentialing pathways are aligned with recognised international frameworks,
                     including QABA and IBAO.</p>
             </div>
+            <div>
+                <img class="section-image section-image-tall mb-5" src="https://ik.imagekit.io/oy1ippox9/WhatsApp%20Image%202025-06-26%20at%2016.06.46_e5c6e650.jpg?updatedAt=1750951739309" alt="Nobelova Gradani learning community">
+                <p class="image-caption">Learning together, growing together</p>
+            </div>
             <div class="grid grid-cols-2 gap-4">
                 <div class="p-6 rounded-2xl bg-purple-100"><strong
                         class="block text-4xl text-purple-900">64+</strong><span class="text-gray-700">Partner
@@ -416,7 +424,7 @@
                 <div
                     class="course-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                     <div class="h-56 bg-purple-300 flex items-center justify-center">
-                        <i class="fas fa-brain text-6xl text-purple-800"></i>
+                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=900&q=80" alt="Mental health learning session">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Certificate in Mental Health</h3>
@@ -437,7 +445,7 @@
                 <div
                     class="course-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                     <div class="h-56 bg-purple-300 flex items-center justify-center">
-                        <i class="fa-solid fa-child text-6xl text-purple-800"></i>
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80" alt="Child development learning activity">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Certificate in Developmental Surveillance</h3>
@@ -458,7 +466,7 @@
                 <div
                     class="course-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                     <div class="h-56 bg-purple-300 flex items-center justify-center">
-                        <i class="fas fa-brain text-6xl text-purple-800"></i>
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80" alt="Early intervention training">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Diploma in Early Intervention Services</h3>
@@ -477,7 +485,7 @@
                 <div
                     class="course-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                     <div class="h-56 bg-purple-300 flex items-center justify-center">
-                        <i class="fa-solid fa-language text-6xl text-purple-800"></i>
+                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=900&q=80" alt="Communication and language training">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Diploma in Speech, Language and Communication Disorders</h3>
@@ -497,7 +505,7 @@
                 <div
                     class="course-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                     <div class="h-56 bg-purple-300 flex items-center justify-center">
-                        <i class="fas fa-brain text-6xl text-purple-800"></i>
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=80" alt="Neurodevelopmental learning workshop">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Professional Diploma in Neurodevelopmental Disorder</h3>
@@ -516,7 +524,7 @@
                 <div
                     class="course-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                     <div class="h-56 bg-purple-300 flex items-center justify-center">
-                        <i class="fa-solid fa-chart-column text-6xl text-purple-800"></i>
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" alt="Data analysis training">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Diploma in Data Analysis</h3>
@@ -550,8 +558,8 @@
                 <div class="text-center">
                     <img src="download.jpg" alt="Instructor 1"
                         class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg instructor-image">
-                    <h3 class="text-2xl font-bold mb-1">Helen Oshikoya</h3>
-                    <p class="text-gray-500 mb-2">Founder & professional lead</p>
+                    <h3 class="text-2xl font-bold mb-1">Mrs. Helen Oshikoya</h3>
+                    <p class="text-gray-500 mb-2">Lead Instructor, Mental Health</p>
                     <p class="text-gray-600">Coordinates Nobelova Gradani’s child development, school support and
                         professional capacity-building programmes.</p>
                 </div>
@@ -559,8 +567,8 @@
                 <div class="text-center">
                     <img src="jeremiah1.jpg" alt="Instructor 2"
                         class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg instructor-image">
-                    <h3 class="text-2xl font-bold mb-1">Charles Iloabueke</h3>
-                    <p class="text-gray-500 mb-2">School Health Manager</p>
+                    <h3 class="text-2xl font-bold mb-1">Mr. Jeremiah Ikhide</h3>
+                    <p class="text-gray-500 mb-2">Lead Instructor, Language Disorder</p>
                     <p class="text-gray-600">Supports school health screening programmes and helps schools turn findings
                         into practical wellbeing actions.</p>
                 </div>
@@ -568,8 +576,8 @@
                 <div class="text-center">
                     <img src="jeremiah2.jpg" alt="Instructor 3"
                         class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg instructor-image">
-                    <h3 class="text-2xl font-bold mb-1">Elisha Iliya</h3>
-                    <p class="text-gray-500 mb-2">HR / Client Relations Superintendent</p>
+                    <h3 class="text-2xl font-bold mb-1">Mr. Jeremiah Olalekan</h3>
+                    <p class="text-gray-500 mb-2">Lead Instructor, Data Analysis</p>
                     <p class="text-gray-600">Helps organisations, families and practitioners connect with the right
                         service and support pathway.</p>
                 </div>
@@ -591,7 +599,7 @@
                     <p class="text-gray-600 mb-6">"The practical guidance helped our team understand developmental needs
                         earlier and respond with more confidence in the classroom."</p>
                     <div class="flex items-center">
-                        <img src="https://via.placeholder.com/150" alt="Student 1" class="w-12 h-12 rounded-full mr-4">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&h=160&q=80" alt="School partner headshot" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
                             <h4 class="font-bold">School partner</h4>
                             <p class="text-gray-500 text-sm">Lagos school community</p>
@@ -603,7 +611,7 @@
                     <p class="text-gray-600 mb-6">"The training connected evidence-based practice to the real situations
                         families and children face every day."</p>
                     <div class="flex items-center">
-                        <img src="https://via.placeholder.com/150" alt="Student 2" class="w-12 h-12 rounded-full mr-4">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&h=160&q=80" alt="Training participant headshot" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
                             <h4 class="font-bold">Training participant</h4>
                             <p class="text-gray-500 text-sm">Education professional</p>
@@ -615,7 +623,7 @@
                     <p class="text-gray-600 mb-6">"Nobelova Gradani creates a clear partnership between families,
                         educators and practitioners. The support continues beyond one session."</p>
                     <div class="flex items-center">
-                        <img src="https://via.placeholder.com/150" alt="Student 3" class="w-12 h-12 rounded-full mr-4">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=160&h=160&q=80" alt="Family partner headshot" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
                             <h4 class="font-bold">Family partner</h4>
                             <p class="text-gray-500 text-sm">Parent and caregiver</p>
